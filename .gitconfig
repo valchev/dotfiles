@@ -1,0 +1,28 @@
+[color]
+    diff = auto
+    status = auto
+    branch = auto
+[core]
+    whitespace = cr-at-eol
+[http]
+    sllverify = false
+    sslverify = false
+[user]
+    name = Alexander Valchev
+    email = a.valchevbox@gmail.com
+[push]
+    default = tracking
+[alias]
+    c = commit -m
+    co = checkout
+    a = add
+    d = diff
+    dic = diff --cached
+    pl = pull --rebase
+    ps = push
+    st = status
+    out = log origin..HEAD
+    qpl = log --pretty=\"%Cblue%h%Creset %Cgreen[%cr]%Creset %s\" origin/production..origin/master
+    l = log --all --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset %Cblue%an%Creset' --abbrev-commit --date=relative
+    ci = commit
+    ca = commit --amend

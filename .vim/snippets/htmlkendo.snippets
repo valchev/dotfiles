@@ -1,0 +1,37 @@
+#base
+snippet kcdn
+	<!DOCTYPE html>
+	<html>
+	<head>
+		<title>KendoUI Test Page</title>
+		
+		<link href="http://cdn.kendostatic.com/2012.3.1024/styles/kendo.common.min.css" rel="stylesheet" />
+		<link href="http://cdn.kendostatic.com/2012.3.1024/styles/kendo.default.min.css" rel="stylesheet" />
+		<link href="http://cdn.kendostatic.com/2012.3.1024/styles/kendo.dataviz.min.css" rel="stylesheet" />
+		<link href="http://cdn.kendostatic.com/2012.3.1024/styles/kendo.mobile.all.min.css" rel="stylesheet" />
+
+		<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+		<script src="http://cdn.kendostatic.com/2012.3.1024/js/kendo.all.min.js"></script>
+	</head>
+	<body>
+		${1}
+
+		<script>
+
+		</script>
+	</body>
+	</html>
+#kendo mobile view
+snippet km-view
+	<div id="${1:foo}" data-role="view">
+		${2}
+	</div>
+#kendo mobile listView
+snippet km-lv
+	<ul id="${1:list}" data-role="listview" data-source="${2:dataSource}" data-template="${3:tmp}"></ul>
+#kendo mobile actionSheet
+snippet km-action
+	<ul id="${1:actionsheet}" data-role="actionsheet" data-open="${2:onOpen}">
+		<li><a href="#" data-action="${3:action_func}">${4:action_name}</a></li>
+
+	</ul>
