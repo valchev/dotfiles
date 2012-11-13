@@ -73,10 +73,11 @@ set smarttab
 "case-smart searching - searches case sensitive only if there is a capital letter in the search expression
 set ignorecase
 set smartcase
+set incsearch
 
 "highlight search matches
-set hlsearch
-set incsearch
+set nohlsearch
+set showmatch
 
 "show the cursor position all the time
 set ruler
