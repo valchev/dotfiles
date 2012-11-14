@@ -52,7 +52,7 @@ set number
 syntax on
 
 "color scheme
-colorscheme railscasts
+colorscheme vividchalk
 
 "make command completion useful
 set wildmenu
