@@ -14,7 +14,7 @@ Bundle 'gmarik/vundle'
 
 "My bundles:
 Bundle 'scrooloose/nerdtree' 
-Bundle 'scrooloose/nerdcommenter'
+Bundle 'tomtom/tcomment_vim'
 Bundle 'mattn/zencoding-vim'
 Bundle 'MarcWeber/vim-addon-mw-utils'
 Bundle 'tomtom/tlib_vim'
@@ -120,12 +120,18 @@ vnoremap <C-s> <C-C>:w<CR>
 "indent
 nnoremap <Tab> >>
 nnoremap <S-Tab> <<
-vnoremap <Tab> >gv
-vnoremap <S-Tab> <gv
+inoremap <S-Tab> <C-D>
+vnoremap > >gv
+vnoremap < <gv
 
 "toggle NerdTree
 noremap <leader>] :NERDTreeToggle<CR>
 
+"snipmate aliases
 let g:snipMate = {}
 let g:snipMate.scope_aliases = {}
-let g:snipMate.scope_aliases['html'] = 'html,htmlkendo,javascript,javascript-jquery'
+let g:snipMate.scope_aliases['html'] = 'html,htmlkendo,javascript,javascript-jquery,javascript-kendo'
+let g:snipMate.scope_aliases['js'] = 'html,htmlkendo,javascript,javascript-jquery,javascript-kendo'
+
+"zen code key mapping
+let g:user_zen_leader_key = '<c-z>'

@@ -49,14 +49,14 @@ snippet kcdn-beta
 snippet km-action
 	<ul id="${1:actionsheet}" data-role="actionsheet" data-open="${2:onOpen}">
 		<li><a href="#" data-action="${3:action_func}">${4:action_name}</a></li>
-	</ul>${5}
+	</ul>
 #kendo mobile button
 snippet km-button
-	<a href="${1:#foo}" data-role="button" data-click="${2:onClick}">${3:Button}</a>${4}
+	<a href="${1:#foo}" data-role="button" data-click="${2:onClick}">${3:Button}</a>
 #kendo mobile button-group
 	<ul data-role="buttongroup" id="${1:btnGroup}">
 		<li>${2:Option1}</li>
-	</ul>${3}
+	</ul>
 #kendo mobile layout
 snippet km-layout
 	<div data-role="layout" data-id="${1:default}">
@@ -73,47 +73,84 @@ snippet km-layout
 				<a href="${4:#bar}" data-icon="history">${5:bar}</a>
 			</div>
 		</div>
-	</div>${6}
+	</div>
 #kendo mobile listView
-snippet km-lv
-	<ul id="${1:list}" data-role="listview" data-source="${2:dataSource}" data-template="${3:tmp}"></ul>${4}
+snippet km-listview
+	<ul id="${1:list}" data-role="listview" data-source="${2:dataSource}" data-template="${3:tmp}"></ul}
 #kendo mobile mobileView
-snippet km-mv
+snippet km-modalview
 	<div id="${1:foo}" data-role="modalview">
 		${2}
-	</div>${3}
+	</div>
 #kendo mobile navBar
 snippet km-navbar
 	<div data-role="navbar">
 		<span data-role="view-title">My View Title</span>
-	</div>${1}
+	</div>
 #kendo mobile pane
 snippet km-pane
 	<div data-role="pane" id="${1:fooPane}">
 		<div data-role="view" id="${2:foo}">
 			${3}
 		</div>
-	</div>${4}
+	</div>
 #kendo mobile popover
 snippet km-popover
 	 <div id="${1:foo}" data-role="popover">
 		 <div data-role="view">
 			
 		 </div>
-	 </div>${2}
+	 </div>
 #kendo mobile scroller
 snippet km-scroller
 	<div data-role="scroller">
 		${1:content}
 	</div>
 #kendo mobile scrollView
-snippet km-sv
+snippet km-scrollview
 	<div data-role="scrollview" id="${1:foo}>
 		Foo
-	</div>${2}
+	</div>
+#kendo mobile splitview
+snippet km-splitview
+	<div data-role="splitview">
+		<div data-role="pane" id="side-pane">
+			<div data-role="view">
+				<!-- view content -->
+			</div>
+		</div>
+		<div data-role="pane" data-layout="default" id="main-pane">
+			<div data-role="view">
+				<!-- view content -->
+			</div>
+		</div>
+		<div data-role="layout" data-id="default">
+		</div>
+	</div>
+#kendo mobile switch
+snippet km-switch
+	<input type="checkbox" data-role="switch" />
+#kendo mobile tabstrip
+snippet km-tabstrip
+	<div data-role="tabstrip">
+		<a href="#${1:foo}">Home</a>
+		<a href="#${2:bar}">Profile</a>
+	</div>
+#kendo mobile touch
+snippet km-touch
+	<div data-role="touch" id="${1:foo}">
+		${2}
+	</div>
 #kendo mobile view
-snippet km-v
+snippet km-view
 	<div id="${1:foo}" data-role="view">
 		${2}
-	</div>${3}
+	</div>
 
+#= Framework =#
+
+#kendo template
+snippet k-tmp
+	<script id="${1:tmp}" type="text/x-kendo-template">
+		${2}
+	</script>
