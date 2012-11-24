@@ -132,6 +132,8 @@ let g:snipMate = {}
 let g:snipMate.scope_aliases = {}
 let g:snipMate.scope_aliases['html'] = 'html,htmlkendo,javascript,javascript-jquery,javascript-kendo'
 let g:snipMate.scope_aliases['js'] = 'html,htmlkendo,javascript,javascript-jquery,javascript-kendo'
+"snipmate trigger
+let g:snips_trigger_key='<C-space>'
 
 "zen code key mapping
-let g:user_zen_leader_key = '<c-z>'
+let g:user_zen_leader_key = '<C-z>'
