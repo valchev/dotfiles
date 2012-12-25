@@ -3,3 +3,14 @@
 # application
 snippet kmapp
 	var app = new kendo.mobile.Application()${1}
+
+#= Framework #
+
+# MVVM
+snippet kvm
+	var viewModel = kendo.observable({
+		${2}
+	})${1}
+
+snippet kbind
+	kendo.bind($(${1:document.body}), ${2:viewModel});
