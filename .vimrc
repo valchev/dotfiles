@@ -59,6 +59,9 @@ set wildmenu
 
 "font
 set guifont=Source_Code_Pro:h10
+if has("mac") || has("macunix")
+    set guifont=Source_Code_Pro:h15
+endif
 
 "tabs
 set tabstop=4
