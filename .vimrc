@@ -1,5 +1,6 @@
 set nocompatible
 set hidden
+set nowrap
 set rtp=~/.vim/bundle/vundle/,~/.vim,$VIMRUNTIME
 let g:snippets_dir='~/.vim/snippets/'
 
@@ -14,8 +15,9 @@ Bundle 'gmarik/vundle'
 
 "My bundles:
 Bundle 'scrooloose/nerdtree' 
-Bundle 'tomtom/tcomment_vim'
 Bundle 'mattn/zencoding-vim'
+
+Bundle 'tomtom/tcomment_vim'
 Bundle 'MarcWeber/vim-addon-mw-utils'
 Bundle 'tomtom/tlib_vim'
 Bundle 'garbas/vim-snipmate'
@@ -67,11 +69,12 @@ endif
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
-set expandtab
 
 "indentation
 set autoindent
+set smartindent
 set smarttab
+set expandtab
 
 "case-smart searching - searches case sensitive only if there is a capital letter in the search expression
 set ignorecase
@@ -104,16 +107,16 @@ set directory=~/vim-tmp
 "disable arrow keys completely
 nnoremap <up> <nop>
 nnoremap <down> <nop>
-nnoremap <left> <nop>
-nnoremap <right> <nop>
-inoremap <up> <nop>
-inoremap <down> <nop>
-inoremap <left> <nop>
-inoremap <right> <nop>
+nnoremap <left> <S-^>
+nnoremap <right> <S-$>
 vnoremap <up> <nop>
 vnoremap <down> <nop>
-vnoremap <left> <nop>
-vnoremap <right> <nop>
+vnoremap <left> <S-^>
+vnoremap <right> <S-$>
+inoremap <up> <nop>
+inoremap <down> <nop>
+inoremap <left> <NOP>
+inoremap <right> <NOP>
 
 "use C-s for saving
 noremap <C-s> :w<CR>
@@ -140,3 +143,29 @@ let g:snips_trigger_key='<C-space>'
 
 "zen code key mapping
 let g:user_zen_leader_key = '<C-z>'
+
+function! DelEmptyLineAbove()
+    if line(".") == 1
+        return
+    endif
+    let l:line = getline(line(".") - 1)
+    if l:line =~ '^\s*$'
+        let l:colsave = col(".")
+        .-1d
+        silent normal! 
+        call cursor(line("."), l:colsave)
+    endif
+endfunction
+
+function! DelEmptyLineBelow()
+    if line(".") == line("$")
+        return
+    endif
+    let l:line = getline(line(".") + 1)
+    if l:line =~ '^\s*$'
+        let l:colsave = col(".")
+        .+1d
+        ''
+        call cursor(line("."), l:colsave)
+    endif
+endfunction
