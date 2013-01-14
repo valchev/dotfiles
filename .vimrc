@@ -25,6 +25,8 @@ Bundle 'tpope/vim-ragtag'
 Bundle 'Townk/vim-autoclose'
 Bundle 'vim-scripts/JavaScript-Indent'
 
+Bundle 'ervandew/supertab'
+
 filetype plugin indent on " required!
 
 "end vundle config
@@ -129,6 +131,13 @@ nnoremap <S-Tab> <<
 inoremap <S-Tab> <C-D>
 vnoremap > >gv
 vnoremap < <gv
+
+autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
+autocmd FileType html set omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType html set omnifunc=csscomplete#CompleteCSS
+autocmd FileType css set omnifunc=csscomplete#CompleteCSS
+autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
 
 "toggle NerdTree
 noremap <leader>] :NERDTreeToggle<CR>
