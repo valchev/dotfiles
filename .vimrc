@@ -60,12 +60,18 @@ colorscheme vividchalk
 
 "make command completion useful
 set wildmenu
+"stuff to ignore when tab completing
+set wildignore+=*DS_Store*
+set wildignore+=*.png,*.jpg,*.gif
 
 "font
 set guifont=Source_Code_Pro:h10
 if has("mac") || has("macunix")
     set guifont=Source_Code_Pro:h15
 endif
+
+"Reload files changed outside vim
+set autoread
 
 "tabs
 set tabstop=4
@@ -84,7 +90,7 @@ set smartcase
 set incsearch
 
 "highlight search matches
-set nohlsearch
+set hlsearch
 set showmatch
 
 "show the cursor position all the time
