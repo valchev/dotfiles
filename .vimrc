@@ -152,29 +152,3 @@ let g:snips_trigger_key='<C-space>'
 
 "zen code key mapping
 let g:user_zen_leader_key = '<C-z>'
-
-function! DelEmptyLineAbove()
-    if line(".") == 1
-        return
-    endif
-    let l:line = getline(line(".") - 1)
-    if l:line =~ '^\s*$'
-        let l:colsave = col(".")
-        .-1d
-        silent normal! 
-        call cursor(line("."), l:colsave)
-    endif
-endfunction
-
-function! DelEmptyLineBelow()
-    if line(".") == line("$")
-        return
-    endif
-    let l:line = getline(line(".") + 1)
-    if l:line =~ '^\s*$'
-        let l:colsave = col(".")
-        .+1d
-        ''
-        call cursor(line("."), l:colsave)
-    endif
-endfunction
