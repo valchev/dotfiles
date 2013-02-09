@@ -141,8 +141,6 @@ autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
 
 "toggle NerdTree
 noremap <leader>] :NERDTreeToggle<CR>
-"open NerdTree at startup
-autocmd vimenter * NERDTree
 
 "snipmate aliases
 let g:snipMate = {}
