@@ -14,3 +14,28 @@ snippet kvm
 
 snippet kbind
 	kendo.bind($(${1:document.body}), ${2:viewModel});
+
+# DataSource
+snippet kds
+	var ${1:dataSource} = new kendo.data.DataSource({
+		data: [
+			{ id: 1, item: "Item 1", foo: 1, bar: true,  baz: new Date(1995,11,17) },
+			{ id: 2, item: "Item 2", foo: 2, bar: false, baz: new Date(2010,10,27) },
+			{ id: 3, item: "Item 3", foo: 3, bar: true,  baz: new Date(2009, 0,18) },
+			{ id: 4, item: "Item 4", foo: 4, bar: false, baz: new Date(2005, 8,15) },
+			{ id: 5, item: "Item 5", foo: 5, bar: false, baz: new Date(2011,10,11) },
+			{ id: 6, item: "Item 6", foo: 6, bar: true,  baz: new Date(2013, 5, 1) }
+		],
+		schema: {
+			model: {
+				id: "id",
+				fields: {
+					id: { type: "number" },
+					item: { type: "string" },
+					foo: { type: "number" },
+					bar: { type: "boolean" },
+					baz: { type: "date" }
+				}
+			}
+		}
+	})${2:;}
