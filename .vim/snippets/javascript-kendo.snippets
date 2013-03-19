@@ -40,6 +40,19 @@ snippet kds
 		}
 	})${2:;}
 
+snippet kgeneratedata
+	function generateData(n) {
+		var data = [],
+			temp = {};
+
+		for(var i = 0; i < n; i++) {
+			temp = { id: i + 1, foo: "item " + (i + 1) };
+			data.push(temp);
+		}
+
+		return data;
+	}
+
 # Validator
 snippet kvalidator
 	validator = $("${1:#form}").kendoValidator(${2}).data("kendoValidator")${3:;}
