@@ -56,3 +56,11 @@ snippet kgeneratedata
 # Validator
 snippet kvalidator
 	validator = $("${1:#form}").kendoValidator(${2}).data("kendoValidator")${3:;}
+# Widgets
+snippet kgrid
+	$("#${1:grid}").kendoGrid({
+		dataSource: ${1:dataSource},
+		columns: [
+			${3}	
+		]
+	})${2:;}
