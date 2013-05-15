@@ -22,6 +22,7 @@ Bundle 'MarcWeber/vim-addon-mw-utils'
 Bundle 'tomtom/tlib_vim'
 Bundle 'garbas/vim-snipmate'
 Bundle 'tpope/vim-ragtag'
+Bundle 'tpope/vim-markdown'
 Bundle 'Townk/vim-autoclose'
 Bundle 'vim-scripts/JavaScript-Indent'
 
@@ -158,3 +159,5 @@ let g:snips_trigger_key='<C-space>'
 
 "zen code key mapping
 let g:user_zen_leader_key = '<C-z>'
+
+nnoremap ,d /<C-r><C-w>:<space>function<CR>
