@@ -4,12 +4,13 @@
     branch = auto
 [core]
     whitespace = cr-at-eol
+	autocrlf = true
 [http]
     sllverify = false
     sslverify = false
 [user]
-    name = Alexander Valchev
-    email = a.valchevbox@gmail.com
+	name = Alexander Valchev
+	email = a.valchevbox@gmail.com
 [push]
     default = tracking
 [alias]

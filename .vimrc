@@ -27,6 +27,7 @@ Bundle 'Townk/vim-autoclose'
 Bundle 'vim-scripts/JavaScript-Indent'
 
 Bundle 'ervandew/supertab'
+Bundle 'corntrace/bufexplorer'
 
 filetype plugin indent on " required!
 
@@ -37,6 +38,9 @@ autocmd BufEnter * silent! lcd %:p:h
 
 "copy-paste from widows clipboard
 set clipboard+=unnamed
+
+" whitespace!
+set list listchars=tab:»·,trail:·
 
 "more informative status line
 set statusline=%F%m%r%h%w\ [Buff=%n]\ [TYPE=%Y]\ [LEN=%L]
