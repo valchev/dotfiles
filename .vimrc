@@ -15,7 +15,7 @@ Bundle 'gmarik/vundle'
 
 "My bundles:
 Bundle 'scrooloose/nerdtree' 
-Bundle 'mattn/zencoding-vim'
+Bundle 'mattn/emmet-vim'
 
 Bundle 'tomtom/tcomment_vim'
 Bundle 'MarcWeber/vim-addon-mw-utils'
@@ -143,6 +143,9 @@ inoremap <S-Tab> <C-D>
 vnoremap > >gv
 vnoremap < <gv
 
+"map leader key
+let mapleader="  "
+
 autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 autocmd FileType html set omnifunc=javascriptcomplete#CompleteJS
@@ -159,7 +162,10 @@ let g:snipMate.scope_aliases = {}
 let g:snipMate.scope_aliases['html'] = 'html,htmlkendo,javascript,javascript-jquery,javascript-kendo'
 let g:snipMate.scope_aliases['js'] = 'html,htmlkendo,javascript,javascript-jquery,javascript-kendo'
 "snipmate trigger
-let g:snips_trigger_key='<C-space>'
+"let g:snips_trigger_key='<C-space>'
+imap <C-space> <Plug>snipMateNextOrTrigger
 
 "zen code key mapping
+
 let g:user_zen_leader_key = '<C-z>'
+let g:user_emmet_leader_key = '<C-z>'
