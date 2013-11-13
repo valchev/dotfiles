@@ -71,7 +71,7 @@ set wildignore+=*.png,*.jpg,*.gif
 
 "font
 if has("win32") || has("win16")
-    set guifont=Source_Code_Pro:h10
+    set guifont=Source_Code_Pro:h11
 elseif has("mac") || has("macunix")
     set guifont=Source_Code_Pro:h15
 else
