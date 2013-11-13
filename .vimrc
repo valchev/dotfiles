@@ -7,7 +7,6 @@ let g:snippets_dir='~/.vim/snippets/'
 "vundle config
 filetype off " required!
 
-set rtp+=~/vimfiles/bundle/vundle
 call vundle#rc()
 
 "let vundle manage vundle
@@ -61,7 +60,8 @@ set number
 syntax on
 
 "color scheme
-colorscheme vividchalk
+set t_Co=256
+colorscheme jellybeans
 
 "make command completion useful
 set wildmenu
@@ -70,9 +70,12 @@ set wildignore+=*DS_Store*
 set wildignore+=*.png,*.jpg,*.gif
 
 "font
-set guifont=Source_Code_Pro:h10
-if has("mac") || has("macunix")
+if has("win32") || has("win16")
+    set guifont=Source_Code_Pro:h10
+elseif has("mac") || has("macunix")
     set guifont=Source_Code_Pro:h15
+else
+    set guifont=Source\ Code\ Pro\ Semibold\ 10
 endif
 
 "Reload files changed outside vim
@@ -113,7 +116,7 @@ set cursorline
 "make backspace work like most other apps
 set backspace=indent,eol,start
 
-"store temp files in a central spot     
+"store temp files in a central spot
 set backupdir=~/vim-tmp
 set directory=~/vim-tmp
 
@@ -128,8 +131,8 @@ vnoremap <left> <S-^>
 vnoremap <right> <S-$>
 inoremap <up> <nop>
 inoremap <down> <nop>
-inoremap <left> <NOP>
-inoremap <right> <NOP>
+inoremap <left> <nop>
+inoremap <right> <nop>
 
 "use C-s for saving
 noremap <C-s> :w<CR>
