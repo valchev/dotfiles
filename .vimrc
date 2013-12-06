@@ -27,6 +27,7 @@ Bundle 'vim-scripts/JavaScript-Indent'
 
 Bundle 'ervandew/supertab'
 Bundle 'corntrace/bufexplorer'
+Bundle 'airblade/vim-gitgutter'
 
 filetype plugin indent on " required!
 
