@@ -3,14 +3,17 @@
     status = auto
     branch = auto
 [core]
+    autocrlf = false
     whitespace = cr-at-eol
-    autocrlf = true
+    editor = vim
 [http]
     sllverify = false
     sslverify = false
 [user]
-	name = Alexander Valchev
-	email = a.valchevbox@gmail.com
+    name = Alexander Valchev
+    email = a.valchevbox@gmail.com
+[format]
+  pretty = %Cblue%h%Creset %Cgreen[%cr]%Creset (%an) %s
 [push]
     default = tracking
 [alias]
