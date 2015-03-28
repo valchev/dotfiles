@@ -1,0 +1,40 @@
+#= jQuery snippets =#
+
+snippet $
+	$("${1}")${2}
+snippet ajax
+	$.ajax({
+		url: '${1:mydomain.com/url}',
+		type: '${2:POST}',
+		dataType: '${3:json/xml}',
+		data: ${4},
+		complete: function (jqXHR, textStatus) {
+			${5:// callback}
+		},
+		success: function (data, textStatus, jqXHR) {
+			${6:// success callback}
+		},
+		error: function (jqXHR, textStatus, errorThrown) {
+			${7:// error callback}
+		}
+	});
+snippet bind
+	${1:obj}.bind('${2:event name}', function (${3:e}) {
+		${4:// event handler}
+	});
+snippet unbind
+	${1:obj}.unbind('${2:event name}')${3}
+snippet on
+	${1:obj}.on('${2:events}', '${3:selector expression}', function (${4:e}) {
+		${5:// event handler}
+	});
+snippet off
+	${1:obj}.off('${2:events}', '${3:selector expression}'${4:, handler})${5}
+snippet one
+	${1:obj}.one('${2:event name}', function (${3:e}) {
+		${4:// event handler}
+	});
+snippet ready
+	$(function () {
+		${1}
+	});

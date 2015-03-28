@@ -1,0 +1,166 @@
+#base
+snippet kcdn
+	<!DOCTYPE html>
+	<html>
+	<head>
+		<title>KendoUI Test Page</title>
+		
+		<link href="http://cdn.kendostatic.com/2013.3.1324/styles/kendo.common.min.css" rel="stylesheet" />
+		<link href="http://cdn.kendostatic.com/2013.3.1324/styles/kendo.default.min.css" rel="stylesheet" />
+		<link href="http://cdn.kendostatic.com/2013.3.1324/styles/kendo.dataviz.min.css" rel="stylesheet" />
+		<link href="http://cdn.kendostatic.com/2013.3.1324/styles/kendo.mobile.all.min.css" rel="stylesheet" />
+
+		<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+		<script src="http://cdn.kendostatic.com/2013.3.1324/js/kendo.all.min.js"></script>
+	</head>
+	<body>
+		${1}
+		<script>
+
+		</script>
+	</body>
+	</html>
+
+snippet kpeoplejs
+	<script src="http://demos.kendoui.com/content/shared/js/people.js"></script>
+
+snippet kproductsjs
+	<script src="http://demos.kendoui.com/content/shared/js/products.js"></script>
+#base-beta
+snippet kcdn-beta
+	<!DOCTYPE html>
+	<html>
+	<head>
+		<title>KendoUI Test Page</title>
+		
+		<link href="http://cdn.kendostatic.com/2013.3.1030/styles/kendo.common.min.css" rel="stylesheet" />
+		<link href="http://cdn.kendostatic.com/2013.3.1030/styles/kendo.default.min.css" rel="stylesheet" />
+		<link href="http://cdn.kendostatic.com/2013.3.1030/styles/kendo.dataviz.min.css" rel="stylesheet" />
+		<link href="http://cdn.kendostatic.com/2013.3.1030/styles/kendo.mobile.all.min.css" rel="stylesheet" />
+
+		<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+		<script src="http://cdn.kendostatic.com/2013.3.1030/js/kendo.all.min.js"></script>
+	</head>
+	<body>
+		${1}
+		<script>
+
+		</script>
+	</body>
+	</html>
+
+#= Mobile =#
+
+#kendo mobile actionSheet
+snippet km-action
+	<ul id="${1:actionsheet}" data-role="actionsheet" data-open="${2:onOpen}">
+		<li><a href="#" data-action="${3:action_func}">${4:action_name}</a></li>
+	</ul>
+#kendo mobile button
+snippet km-button
+	<a href="${1:#foo}" data-role="button" data-click="${2:onClick}">${3:Button}</a>
+#kendo mobile button-group
+	<ul data-role="buttongroup" id="${1:btnGroup}">
+		<li>${2:Option1}</li>
+	</ul>
+#kendo mobile layout
+snippet km-layout
+	<div data-role="layout" data-id="${1:default}">
+		<header data-role="header">
+			<div data-role="navbar">
+				<!--<a class="nav-button" data-align="left" data-role="backbutton">Back</a>-->
+				<span data-role="view-title"></span>
+			</div>
+		</header>
+
+		<div data-role="footer">
+			<div data-role="tabstrip">
+				<a href="${2:#foo}" data-icon="contacts">${3:foo}</a>
+				<a href="${4:#bar}" data-icon="history">${5:bar}</a>
+			</div>
+		</div>
+	</div>
+#kendo mobile listView
+snippet km-listview
+	<ul id="${1:list}" data-role="listview" data-source="${2:dataSource}" data-template="${3:tmp}"></ul>
+#kendo mobile mobileView
+snippet km-modalview
+	<div id="${1:foo}" data-role="modalview">
+		${2}
+	</div>
+#kendo mobile navBar
+snippet km-navbar
+	<div data-role="navbar">
+		<span data-role="view-title">My View Title</span>
+	</div>
+#kendo mobile pane
+snippet km-pane
+	<div data-role="pane" id="${1:fooPane}">
+		<div data-role="view" id="${2:foo}">
+			${3}
+		</div>
+	</div>
+#kendo mobile popover
+snippet km-popover
+	 <div id="${1:foo}" data-role="popover">
+		 <div data-role="view">
+			
+		 </div>
+	 </div>
+#kendo mobile scroller
+snippet km-scroller
+	<div data-role="scroller">
+		${1:content}
+	</div>
+#kendo mobile scrollView
+snippet km-scrollview
+	<div data-role="scrollview" id="${1:foo}">
+		Foo
+	</div>
+#kendo mobile splitview
+snippet km-splitview
+	<div data-role="splitview">
+		<div data-role="pane" id="side-pane">
+			<div data-role="view">
+				<!-- view content -->
+			</div>
+		</div>
+		<div data-role="pane" data-layout="default" id="main-pane">
+			<div data-role="view">
+				<!-- view content -->
+			</div>
+		</div>
+		<div data-role="layout" data-id="default">
+		</div>
+	</div>
+#kendo mobile switch
+snippet km-switch
+	<input type="checkbox" data-role="switch" />
+#kendo mobile tabstrip
+snippet km-tabstrip
+	<div data-role="tabstrip">
+		<a href="#${1:foo}">Home</a>
+		<a href="#${2:bar}">Profile</a>
+	</div>
+#kendo mobile touch
+snippet km-touch
+	<div data-role="touch" id="${1:foo}">
+		${2}
+	</div>
+#kendo mobile view
+snippet km-view
+	<div id="${1:foo}" data-role="view">
+		${2}
+	</div>
+
+#= Framework =#
+
+#kendo template
+snippet k-tmp
+	<script id="${1:tmp}" type="text/x-kendo-template">
+		${2}
+	</script>
+
+#custom validation message position
+snippet kvalwarning
+	<span class="k-invalid-msg" data-for="${1:name}"></span>${2}

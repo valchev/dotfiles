@@ -1,0 +1,83 @@
+# Attributes
+
+snippet .
+	class="${1}"${2}
+snippet #
+	id="${1}"${2}
+snippet attr
+	${1:attribute}="${2:property}"
+snippet alt
+	alt="${1}"${2}
+snippet data
+	data-${1}="${2:$1}"${3}
+	for="${1}"${2}
+snippet height
+	height="${1}"${2}
+snippet href
+	href="${1:#}"${2}
+snippet name
+	name="${1}"${2}
+snippet src
+	src="${1}"${2}
+snippet title
+	title="${1}"${2}
+snippet type
+	type="${1}"${2}
+snippet value
+	value="${1}"${2}
+snippet width
+	width="${1}"${2}
+
+# Elements
+
+snippet a
+	<a href="${1:#}">${2:$1}</a>
+snippet a.
+	<a class="${1}" href="${2:#}">${3:$1}</a>
+snippet a#
+	<a id="${1}" href="${2:#}">${3:$1}</a>
+snippet br
+	<br />${1}
+snippet div
+	<div>
+		${1}
+	</div>
+snippet div.
+	<div class="${1}">
+		${2}
+	</div>
+snippet div#
+	<div id="${1}">
+		${2}
+	</div>
+snippet html5
+	<!DOCTYPE html>
+	<html>
+		<head>
+			<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+			<title>${1:TestPage}</title>
+		</head>
+		<body>
+			${2:body}
+		</body>
+	</html>
+snippet input
+	<input type="${1:button/text/number/checkbox/hidden}" name="${2}" id="${3:$2}" value="${4}" />${5}
+snippet input.
+	<input class="${1}" type="${2:button/text/number/checkbox/hidden}" name="${3}" id="${4:$3}" value="${5}" />${6}
+snippet script
+	<script>
+		${1}
+	</script>
+snippet select
+	<select name="${1}" id="${2:$1}">
+		${3}
+	</select>
+snippet select.
+	<select name="${1}" id="${2:$1}" class="${3}>
+		${4}
+	</select>
+snippet style
+	<style type="text/css" media="${1:all}">
+		${2}
+	</style>
