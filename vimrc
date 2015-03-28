@@ -1,34 +1,50 @@
 set nocompatible
-set hidden
 set nowrap
-set rtp=~/.vim/bundle/vundle/,~/.vim,$VIMRUNTIME
+set rtp+=~/.vim/bundle/Vundle.vim/
 let g:snippets_dir='~/.vim/snippets/'
 
 "vundle config
 filetype off " required!
 
-call vundle#rc()
+call vundle#begin()
 
 "let vundle manage vundle
-Bundle 'gmarik/vundle'
+Plugin 'gmarik/Vundle.vim'
 
 "My bundles:
-Bundle 'scrooloose/nerdtree' 
-Bundle 'mattn/emmet-vim'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-ragtag'
+Plugin 'tpope/vim-repeat'
+Plugin 'tpope/vim-git'
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-markdown'
+Plugin 'tpope/vim-eunuch'
 
-Bundle 'tomtom/tcomment_vim'
-Bundle 'MarcWeber/vim-addon-mw-utils'
-Bundle 'tomtom/tlib_vim'
-Bundle 'garbas/vim-snipmate'
-Bundle 'tpope/vim-ragtag'
-Bundle 'tpope/vim-markdown'
-Bundle 'Townk/vim-autoclose'
-Bundle 'vim-scripts/JavaScript-Indent'
+Plugin 'scrooloose/nerdtree' 
+Plugin 'mattn/emmet-vim'
 
-Bundle 'ervandew/supertab'
-Bundle 'corntrace/bufexplorer'
-Bundle 'airblade/vim-gitgutter'
+Plugin 'corntrace/bufexplorer'
+Plugin 'garbas/vim-snipmate'
 
+"color schemas
+Plugin 'chriskempson/base16-vim'
+
+Plugin 'vim-scripts/JavaScript-Indent'
+Plugin 'groenewege/vim-less'
+Plugin 'mileszs/ack.vim'
+Plugin 'itchyny/lightline.vim'
+Plugin 'airblade/vim-gitgutter'
+
+"Plugin 'Valloric/YouCompleteMe'
+
+Plugin 'tomtom/tlib_vim'
+Plugin 'tomtom/tcomment_vim'
+Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'Townk/vim-autoclose'
+
+Plugin 'ervandew/supertab'
+
+call vundle#end() " required!
 filetype plugin indent on " required!
 
 "end vundle config
@@ -46,13 +62,15 @@ set list listchars=tab:»·,trail:·
 set statusline=%F%m%r%h%w\ [Buff=%n]\ [TYPE=%Y]\ [LEN=%L]
 
 "always show the status line
-set laststatus=2
+"set laststatus=2
 
 "keep longer history
 set history=100
 
 "hide the toolbar
-set guioptions-=T
+if has("win32") || has("win16")
+    set guioptions-=T
+endif
 
 "show line numbers
 set number
@@ -68,7 +86,8 @@ colorscheme jellybeans
 set wildmenu
 "stuff to ignore when tab completing
 set wildignore+=*DS_Store*
-set wildignore+=*.png,*.jpg,*.gif
+set wildignore+=*.png,*.jpg,*.gif,.git,*.obj,*.rbc,*.class
+set wildignore+=deploy/**,dist/**,release/**,*.min.js,*.js.map
 
 "font
 if has("win32") || has("win16")
@@ -79,6 +98,16 @@ else
     set guifont=Source\ Code\ Pro\ Semibold\ 10
 endif
 
+nnoremap <F9>  :bw<CR>
+nnoremap <F7>  :nohlsearch<CR>
+nnoremap <F8> :setlocal spell! spell?<CR>
+nnoremap <F12> :BufExplorer<CR>
+inoremap <F12> <Esc>:BufExplorer<CR>
+
+set hidden
+"set showmode
+set novisualbell
+
 "Reload files changed outside vim
 set autoread
 
@@ -86,6 +115,7 @@ set autoread
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
+set expandtab smartindent
 
 "indentation
 set autoindent
@@ -109,13 +139,17 @@ set ruler
 set showcmd
 
 "add more context around the cursor
-set scrolloff=5
+"set scrolloff=5
 
 "set cursor line
 set cursorline
 
 "make backspace work like most other apps
 set backspace=indent,eol,start
+
+set undofile
+set nobackup
+set nowritebackup
 
 "store temp files in a central spot
 set backupdir=~/vim-tmp
