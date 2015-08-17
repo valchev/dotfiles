@@ -155,6 +155,9 @@ set nowritebackup
 set backupdir=~/vim-tmp
 set directory=~/vim-tmp
 
+"disable Vim's persistent undo
+set noundofile
+
 "disable arrow keys completely
 nnoremap <up> <nop>
 nnoremap <down> <nop>
